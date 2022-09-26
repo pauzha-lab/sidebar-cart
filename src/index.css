@@ -1,13 +1,42 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.custom-number-input input:focus {
+  outline: none !important;
 }
+
+.custom-number-input button:focus {
+  outline: none !important;
+}
+
+.card {
+  @apply bg-white rounded-lg overflow-hidden mb-10 shadow-xl
+}
+
+.badge {
+  @apply px-3 py-1 rounded-full text-xs bg-gray-100 mx-2 font-semibold hover:text-sky-400
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(102, 102, 102)!important;
+}
+
+.slick-prev {
+  left: -1% !important;
+  z-index: 1;
+}
+
+.slick-next {
+  right: -1% !important;
+  z-index: 1;
+}
+
+
